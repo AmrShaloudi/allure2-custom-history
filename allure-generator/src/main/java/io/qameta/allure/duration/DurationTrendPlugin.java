@@ -55,7 +55,7 @@ public class DurationTrendPlugin extends AbstractTrendPlugin<DurationTrendItem> 
         final List<DurationTrendItem> data = getHistoryItems(launchesResults);
 
         return Stream.concat(Stream.of(item), data.stream())
-                .limit(20)
+                .limit(50)
                 .collect(Collectors.toList());
     }
 

@@ -179,7 +179,7 @@ public class HistoryPlugin extends CommonJsonAggregator2 implements Reader {
         result.setNewPassed(isNewPassed(current, prevItems));
 
         final List<HistoryItem> newItems = Stream.concat(Stream.of(current), prevItems.stream())
-                .limit(20)
+                .limit(50)
                 .collect(Collectors.toList());
         data.setItems(newItems);
     }

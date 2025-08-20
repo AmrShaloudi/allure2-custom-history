@@ -65,7 +65,7 @@ public class HistoryTrendPlugin extends AbstractTrendPlugin<HistoryTrendItem> {
         final List<HistoryTrendItem> data = getHistoryItems(launchesResults);
 
         return Stream.concat(Stream.of(item), data.stream())
-                .limit(20)
+                .limit(50)
                 .collect(Collectors.toList());
     }
 

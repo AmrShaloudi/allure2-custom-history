@@ -55,7 +55,7 @@ public class RetryTrendPlugin extends AbstractTrendPlugin<RetryTrendItem> {
         final List<RetryTrendItem> data = getHistoryItems(launchesResults);
 
         return Stream.concat(Stream.of(item), data.stream())
-                .limit(20)
+                .limit(50)
                 .collect(Collectors.toList());
     }
 
